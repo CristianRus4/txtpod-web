@@ -1,0 +1,515 @@
+/*
+  Left – Landing Page Styles
+  - Gradient background: top-right (#FF4019) to bottom-left (#E69525)
+  - Responsive grid: 1 col (mobile) → 3 cols (desktop)
+  - Fonts: Roboto / Ubuntu → system sans fallback
+*/
+
+:root {
+  --bg-start: #FF6B24;
+  --bg-end: #E69525;
+  --text: #ffffff;
+  --text-dim: rgba(255, 255, 255, 0.85);
+  --card-bg: rgba(255, 255, 255, 0.10);
+  --card-border: rgba(255, 255, 255, 0.18);
+  --max-w: 1100px;
+  --hairline: rgba(255, 255, 255, 0.22);
+  --glass-bg: rgba(0, 0, 0, 0.14);
+  --img-shadow: 10px 10px 30px rgba(0,0,0,0.5), 40px 40px 60px rgba(0,0,0,0.3);
+  --btn-hover-bg: rgba(255, 255, 255, 0.18);
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html, body { min-height: 100%; }
+
+body {
+  margin: 0;
+  color: var(--text);
+  background: var(--bg-start);
+  font-family: 'Roboto', 'Ubuntu', system-ui, -apple-system, 'Segoe UI', 'Helvetica Neue', Arial, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  min-width: 370px; /* allow horizontal scroll below 370px */
+}
+
+/* Improve keyboard focus visibility */
+a:focus-visible, .btn:focus-visible, button:focus-visible {
+  outline: 2px solid rgba(255, 255, 255, 0.9);
+  outline-offset: 2px;
+}
+
+/* Global image behavior */
+img {
+  max-width: 100%;
+  height: auto;
+  box-shadow: none;
+}
+
+.container {
+  width: 100%;
+  max-width: var(--max-w);
+  margin: 0 auto;
+  padding-inline: clamp(24px, 6.5vw, 96px);
+}
+
+/* Top navigation */
+.top-nav {
+  position: fixed; /* do not reserve space; appears over content */
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 1000;
+  background: transparent; /* single page bg */
+  border-bottom: none; /* show only when scrolled */
+  opacity: 0; /* hidden until scroll */
+  transform: translateY(-100%);
+  pointer-events: none;
+  transition: opacity 200ms ease, transform 200ms ease, background-color 180ms ease;
+}
+
+.nav-inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 56px;
+}
+
+.brand {
+  color: var(--text);
+  text-decoration: none;
+  font-weight: 700;
+  letter-spacing: -0.02em;
+  font-size: 24px; /* slightly bigger title */
+}
+
+.btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 8px 14px;
+  border-radius: 9999px;
+  color: #fff;
+  text-decoration: none;
+  background: var(--btn-hover-bg);
+  font-weight: 400; /* regular by default */
+  -webkit-backdrop-filter: blur(8px);
+  backdrop-filter: blur(8px);
+  border: 1px solid var(--hairline);
+  transition: background-color 180ms ease, border-color 180ms ease, filter 180ms ease, transform 60ms ease;
+}
+
+.btn:hover { background: var(--btn-hover-bg); filter: brightness(1.05); font-weight: 700; }
+.btn:active { transform: translateY(1px); }
+
+/* Hero */
+.hero {
+  text-align: center;
+  padding: calc(80px + env(safe-area-inset-top)) 0 28px; /* account for iOS notch area */
+  position: relative;
+  overflow: visible;
+}
+
+.hero-head {
+  display: block;
+  margin-bottom: 8px;
+}
+
+.hero-titles {
+  text-align: center;
+}
+
+/* Small pill to indicate iOS 26 readiness */
+.ios-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 6px 12px;
+  border-radius: 9999px;
+  background: var(--btn-hover-bg);
+  border: 1px solid var(--card-border);
+  -webkit-backdrop-filter: blur(8px);
+  backdrop-filter: blur(8px);
+  font-weight: 700;
+  font-size: 14px;
+  margin: 0 0 8px;
+  position: relative;
+  z-index: 1;
+  will-change: opacity, transform;
+  transition: opacity 180ms linear;
+}
+
+/* Blur only the text inside the badge to avoid Safari's backdrop-filter + filter conflict */
+.ios-badge-text {
+  display: inline-block;
+  will-change: filter;
+  transition: filter 180ms linear;
+}
+
+.hero-image {
+  /* Keep full image visible without side cropping */
+  width: 100%;
+  max-width: clamp(300px, 92vw, 980px);
+  height: auto; /* preserve aspect ratio */
+  max-height: 80vh; /* avoid exceeding viewport height */
+  display: block;
+  margin: 18px auto 24px; /* space between subtitle and image */
+  border-radius: 20px;
+  position: relative;
+  z-index: 2;
+  pointer-events: none;
+  will-change: transform;
+}
+
+/* From ~470px and up, crop nicely */
+@media (min-width: 470px) {
+  .hero-image {
+    width: 100%;
+    max-width: 980px;
+    height: 80vh;
+    max-height: 80vh;
+    object-fit: cover;
+    object-position: top center;
+  }
+}
+
+.app-title {
+  margin: 12px 0 10px; /* reduced space above title */
+  font-size: clamp(56px, 8vw, 100px); /* larger title */
+  font-weight: 900; /* bolder title */
+  line-height: 1.05;
+  letter-spacing: -0.02em;
+  position: relative;
+  z-index: 1;
+  will-change: opacity, filter, transform;
+  transition: opacity 180ms linear, filter 180ms linear;
+}
+
+/* Ensure any h1 renders heavy */
+h1 { font-weight: 900; }
+
+.app-subtitle {
+  margin: 0 0 16px;
+  font-size: clamp(22px, 3vw, 30px); /* larger subtitle */
+  color: var(--text); /* same color as title */
+  font-weight: 600; /* bolder subtitle */
+  position: relative;
+  z-index: 1;
+  will-change: opacity, filter, transform;
+  transition: opacity 180ms linear, filter 180ms linear;
+}
+
+.cta {
+  margin: 8px 0 18px;
+}
+
+.cta-desktop { display: none !important; }
+.cta-mobile { display: block; }
+
+/* Mobile: hide static badge until the floater disappears on scroll */
+@media (max-width: 1023px) {
+  .cta-mobile { display: none; }
+  body.scrolled .cta-mobile { display: block; }
+}
+
+.hero-blurb {
+  max-width: 820px;
+  margin: 12px auto 0;
+  font-size: clamp(16px, 2vw, 18px);
+  color: var(--text-dim);
+}
+
+/* Features */
+.stats { padding-block: 24px 14px; }
+.stats-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 18px;
+  text-align: center;
+  justify-items: center; /* center columns */
+}
+
+.stat-value {
+  font-weight: 800;
+  letter-spacing: -0.015em;
+  font-size: clamp(36px, 6vw, 64px);
+}
+
+.stat-label {
+  margin-top: 6px;
+  color: var(--text-dim);
+  font-size: clamp(14px, 2.2vw, 18px);
+}
+
+@media (min-width: 1024px) {
+  .stats-grid { grid-template-columns: repeat(3, 1fr); }
+}
+
+.features {
+  padding-block: 44px 24px; /* more separation from neighbors */
+}
+
+.features-grid {
+  display: grid;
+  gap: 28px; /* slightly larger gutters */
+  grid-template-columns: 1fr;
+}
+
+@media (min-width: 720px) {
+  .features-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (min-width: 1024px) {
+  .hero-head {
+    display: grid;
+    grid-template-columns: 1fr auto;
+    align-items: center;
+    gap: 16px;
+  }
+  .hero-titles { text-align: left; }
+  .cta-desktop { display: inline-block !important; }
+  .cta-mobile { display: none !important; }
+  .features-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+.feature-card {
+  background: transparent;
+  border: 0;
+  border-radius: 0;
+  overflow: visible;
+  box-shadow: none;
+  padding: 12px 14px; /* more breathing room so images aren't flush */
+}
+
+.feature-card img {
+  display: block;
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+  background: transparent;
+  border-radius: 14px; /* soften image edges without a card */
+}
+
+.feature-card h3 {
+  margin: 14px 16px 8px;
+  font-size: 20px;
+}
+
+.feature-card p {
+  margin: 0 16px 16px;
+  color: var(--text-dim);
+  font-size: 15px;
+}
+
+/* Why section */
+.why {
+  padding-block: 40px 56px; /* more vertical rhythm */
+  background: transparent; /* ensure single background */
+}
+
+/* Reviews */
+.reviews {
+  padding-block: 24px 64px;
+}
+
+.reviews h2 {
+  margin: 0 0 6px;
+  font-size: clamp(26px, 3.5vw, 34px);
+}
+
+.reviews-sub {
+  margin: 0 0 18px;
+  color: var(--text-dim);
+  font-size: 16px;
+}
+
+.reviews-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 16px;
+}
+
+@media (min-width: 720px) {
+  .reviews-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (min-width: 1024px) {
+  .reviews-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+.review-card {
+  background: var(--card-bg);
+  border: 1px solid var(--card-border);
+  border-radius: 14px;
+  padding: 14px 16px 16px;
+  backdrop-filter: blur(6px);
+  -webkit-backdrop-filter: blur(6px);
+}
+
+.stars {
+  letter-spacing: 1px;
+  font-size: 14px;
+  margin-bottom: 8px;
+}
+
+.review-title {
+  margin: 0 0 8px;
+  font-size: 18px;
+}
+
+.reviewer {
+  margin: 10px 0 0;
+  color: var(--text-dim);
+}
+
+/* FAQ */
+.faq {
+  padding-block: 24px 72px;
+}
+
+.faq h2 {
+  margin: 0 0 12px;
+  font-size: clamp(26px, 3.5vw, 34px);
+}
+
+.faq-list {
+  display: grid;
+  grid-template-columns: 1fr; /* always single column */
+  gap: 12px;
+}
+
+.faq-item { background: transparent; border: 0; border-radius: 0; padding: 0; }
+.faq-item + .faq-item { border-top: 1px solid var(--card-border); padding-top: 12px; }
+
+.faq-item summary { cursor: pointer; font-weight: 600; list-style: none; display: flex; align-items: center; justify-content: space-between; padding: 8px 0; }
+.faq-item summary::after { content: "+"; color: var(--text); margin-left: 12px; font-weight: 700; }
+.faq-item[open] summary::after { content: "×"; }
+
+.faq-item summary::-webkit-details-marker { display: none; }
+
+.faq-body {
+  margin-top: 8px;
+  color: var(--text-dim);
+}
+
+/* Make FAQ links white (not default blue) */
+.faq-body a,
+.faq-body a:visited {
+  color: var(--text);
+}
+
+.faq-body ol {
+  margin: 0 0 8px 18px;
+}
+
+.why h2 {
+  margin: 0 0 10px;
+  font-size: clamp(26px, 3.5vw, 34px);
+}
+
+.why p {
+  margin: 0;
+  color: var(--text-dim);
+  font-size: 16px;
+  max-width: 900px;
+}
+
+/* Footer */
+.site-footer { /* keep gradient continuous; single background */
+  border-top: 1px solid var(--hairline); /* thin divider */
+  background: transparent;
+}
+
+/* On scroll, strengthen nav readability with blur + subtle tint */
+body.scrolled .top-nav {
+  /* background: var(--glass-bg); */
+  /* -webkit-backdrop-filter: saturate(160%) blur(12px); */
+  /* backdrop-filter: saturate(160%) blur(12px); */
+  /* border-bottom: 1px solid var(--hairline); */
+  opacity: 1;
+  transform: translateY(0);
+  pointer-events: auto;
+}
+
+.footer-inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  padding-block: 14px 20px; /* keep container's horizontal padding */
+  font-size: 14px;
+}
+
+.sitemap {
+  border-top: 1px solid var(--hairline);
+  padding-block: 10px 6px;
+  font-size: 14px;
+}
+.sitemap a {
+  color: var(--text);
+  text-decoration: none;
+  opacity: 0.9;
+  margin: 0 10px;
+}
+.sitemap a:first-of-type { margin-left: 0; }
+.sitemap a:hover { opacity: 1; text-decoration: none; font-weight: 700; }
+
+/* Floating App Store badge that hides once user scrolls */
+.appstore-floater { display: none; position: fixed; left: 50%; bottom: calc(env(safe-area-inset-bottom) + 12px); transform: translateX(-50%); z-index: 1001; opacity: 1; transition: opacity 220ms ease, transform 220ms ease; }
+.appstore-floater img { display: block; width: clamp(160px, 40vw, 245px); height: auto; }
+@media (max-width: 1023px) { .appstore-floater { display: block; } }
+body.scrolled .appstore-floater { opacity: 0; transform: translate(-50%, 16px); pointer-events: none; }
+
+.footer-links a {
+  color: var(--text);
+  text-decoration: none;
+  opacity: 0.9;
+  margin-left: 14px;
+}
+
+.footer-links a:hover { opacity: 1; text-decoration: none; font-weight: 700; }
+
+/* Global link hover: bold instead of underline */
+a:hover { text-decoration: none; font-weight: 700; }
+
+/* Prefer reduced motion */
+@media (prefers-reduced-motion: no-preference) {
+  .hero-image {
+    transition: transform 400ms ease;
+  }
+  .hero-image:hover {
+    transform: translateY(-2px);
+  }
+}
+.seo-intro { padding-block: 20px 14px; }
+.seo-intro h2 { margin: 0 0 8px; font-size: clamp(24px, 3.5vw, 32px); }
+.seo-intro p { color: var(--text-dim); margin: 8px 0; }
+
+.use-cases { padding-block: 28px 18px; }
+.use-cases h2 { margin: 0 0 10px; font-size: clamp(24px, 3.5vw, 32px); }
+.use-cases-grid { display: grid; grid-template-columns: 1fr; gap: 14px; }
+@media (min-width: 720px) { .use-cases-grid { grid-template-columns: repeat(2, 1fr); } }
+@media (min-width: 1024px) { .use-cases-grid { grid-template-columns: repeat(3, 1fr); } }
+.use-cases article { background: var(--card-bg); border: 1px solid var(--card-border); border-radius: 14px; padding: 14px 16px 16px; backdrop-filter: blur(6px); -webkit-backdrop-filter: blur(6px); }
+.use-cases article h3 { margin: 0 0 8px; font-size: 18px; }
+.use-cases article p { margin: 0; color: var(--text-dim); }
+.alternatives { padding-block: 24px 16px; }
+.alternatives h2 { margin: 0 0 8px; font-size: clamp(24px, 3.5vw, 32px); }
+.alternatives p { margin: 8px 0; color: var(--text-dim); }
+.aso-highlights { padding-block: 24px 16px; }
+.aso-grid { display: grid; grid-template-columns: 1fr; gap: 16px; }
+@media (min-width: 1024px) { .aso-grid { grid-template-columns: repeat(2, 1fr); } }
+.aso-col h2 { margin: 0 0 10px; font-size: clamp(22px, 3.2vw, 28px); }
+.checklist { margin: 0; padding-left: 0; color: var(--text-dim); list-style: none; }
+.checklist li { margin: 6px 0; position: relative; padding-left: 16px; }
+.checklist li::before { content: "-"; position: absolute; left: 0; color: var(--text); opacity: 0.95; }
