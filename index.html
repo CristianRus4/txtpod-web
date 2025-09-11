@@ -3,26 +3,29 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
-    <title>txtpod - Turn Articles Into a Private Podcast</title>
-    <meta name="description" content="Turn any article into your own podcast episode. txtpod saves links, scrapes the text, narrates it with natural AI voices in 20+ languages, and delivers it straight into your private podcast feed. Ready to stream in Overcast, Pocket Casts, Apple Podcasts, and more." />
+    <title>txtpod - Text to Speech for Articles | Private Podcast Feed</title>
+    <meta name="description" content="Convert articles to audio with high quality text to speech. Choose from 30+ voices in 20+ languages and get a private podcast feed you can play in any app." />
 
     <!-- Theme/UI colors -->
     <meta name="theme-color" content="#5940ED" />
     <meta name="theme-color" content="#5940ED" media="(prefers-color-scheme: light)" />
     <meta name="theme-color" content="#5940ED" media="(prefers-color-scheme: dark)" />
     <meta name="color-scheme" content="light dark" />
+    <meta name="application-name" content="txtpod" />
+    <meta name="apple-mobile-web-app-title" content="txtpod" />
 
     <!-- Open Graph / Twitter -->
-    <meta property="og:title" content="txtpod - Turn Articles Into a Private Podcast" />
-    <meta property="og:description" content="Save links, get natural AI narration in 20+ languages, and listen in your private podcast feed with any player." />
+    <meta property="og:title" content="txtpod - Text to Speech for Articles | Private Podcast Feed" />
+    <meta property="og:description" content="Convert articles to audio with natural AI voices in 20+ languages and 30+ styles. Your own private podcast feed for any player." />
     <meta property="og:type" content="website" />
     <meta property="og:image" content="images/txtpod-hero.webp" />
+    <meta property="og:locale" content="en_US" />
     <meta name="twitter:card" content="summary_large_image" />
     <meta property="og:site_name" content="txtpod" />
-    <meta name="twitter:title" content="txtpod - Turn Articles Into a Private Podcast" />
-    <meta name="twitter:description" content="Save links, get natural AI narration in 20+ languages, and listen in your private podcast feed with any player." />
+    <meta name="twitter:title" content="txtpod - Text to Speech for Articles | Private Podcast Feed" />
+    <meta name="twitter:description" content="Convert articles to audio with natural AI voices in 20+ languages and 30+ styles. Your own private podcast feed for any player." />
     <meta name="twitter:image" content="images/txtpod-hero.webp" />
-    <meta name="keywords" content="text to speech,read aloud,text reader,tts reader,voice aloud reader,save articles,instapaper,readwise,omnivore,curio,podcast feed,listen later,convert to audio,speechify alternative,read aloud,tts reader,audio text reader,text reader,read out loud,voice aloud reader,save articles,instapaper alternative,speechify alternative,readwise alternative,omnivore alternative,listle alternative,curio alternative,personal podcast,listen later app" />
+    <meta name="keywords" content="text to speech,read aloud,text reader,tts reader,voice aloud reader,save articles,instapaper,readwise,matter,omnivore,curio,podcast feed,listen later,convert to audio,article to audio,article to podcast,text to podcast,private rss feed,private podcast,speechify alternative,pocket alternative,naturalreader alternative,read aloud,tts reader,audio text reader,text reader,read out loud,voice aloud reader,instapaper alternative,readwise alternative,matter alternative,omnivore alternative,listle alternative,curio alternative,personal podcast,listen later app" />
 
     <!-- Canonical + icons -->
     <link rel="canonical" href="" id="canonical-link" />
@@ -34,7 +37,7 @@
     <link rel="icon" sizes="192x192" href="favicon/android-chrome-192x192.png" />
     <link rel="icon" sizes="512x512" href="favicon/android-chrome-512x512.png" />
     <link rel="preload" as="image" href="images/txtpod-hero.webp" />
-    <meta name="robots" content="index,follow" />
+    <meta name="robots" content="index,follow,max-image-preview:large" />
 
     <!-- Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -70,8 +73,11 @@
         {"@type": "Question", "name": "Which podcast apps are supported?", "acceptedAnswer": {"@type": "Answer", "text": "Any app that supports private RSS feeds such as Apple Podcasts, Overcast, Pocket Casts, Castro, and more."}},
         {"@type": "Question", "name": "How many voices and languages are available?", "acceptedAnswer": {"@type": "Answer", "text": "There are 30+ AI voice styles across 20+ languages. You can choose a default voice and switch per item."}},
         {"@type": "Question", "name": "Can txtpod translate articles automatically?", "acceptedAnswer": {"@type": "Answer", "text": "Yes. You can listen in your preferred language with automatic translation."}},
-        {"@type": "Question", "name": "Does txtpod integrate with read later tools?", "acceptedAnswer": {"@type": "Answer", "text": "txtpod can work alongside services like Instapaper, Readwise, and Omnivore. You can save links directly or connect the tools you already use."}},
+        {"@type": "Question", "name": "Does txtpod integrate with read later tools?", "acceptedAnswer": {"@type": "Answer", "text": "txtpod can work alongside services like Instapaper, Readwise, and Matter. You can save links directly or connect the tools you already use."}},
         {"@type": "Question", "name": "Is the podcast feed private?", "acceptedAnswer": {"@type": "Answer", "text": "Yes. Each account has a private RSS feed intended only for your personal use in your podcast app."}},
+        {"@type": "Question", "name": "How is txtpod different from text to speech apps?", "acceptedAnswer": {"@type": "Answer", "text": "txtpod does not keep you in a new player. It creates a private podcast feed so your narrated articles show up in the podcast app you already use."}},
+        {"@type": "Question", "name": "How is txtpod different from read later apps?", "acceptedAnswer": {"@type": "Answer", "text": "txtpod is focused on listening. It converts articles to audio and sends them to your podcast app rather than building another reading list you have to manage."}},
+        {"@type": "Question", "name": "Is txtpod a podcast player?", "acceptedAnswer": {"@type": "Answer", "text": "txtpod is not a podcast player. It generates a personal podcast feed of your narrated articles that you play in Apple Podcasts, Overcast, Pocket Casts, and more."}},
         {"@type": "Question", "name": "Can I change voice, speed, or language per episode?", "acceptedAnswer": {"@type": "Answer", "text": "Yes. Pick a default voice and speed, then override them for any individual article. You can also select a different language for translation."}},
         {"@type": "Question", "name": "How do I add the feed to Apple Podcasts?", "acceptedAnswer": {"@type": "Answer", "text": "Copy your private feed URL from txtpod and paste it into Apple Podcasts using Add Show by URL. The episodes will download like any other podcast."}},
         {"@type": "Question", "name": "How about Overcast or Pocket Casts?", "acceptedAnswer": {"@type": "Answer", "text": "Use Add URL or Add Private Feed in your player. After subscribing, new narrations appear automatically."}},
@@ -93,9 +99,41 @@
       "name": "txtpod",
       "applicationCategory": "MultimediaApplication",
       "operatingSystem": "Web",
-      "url": "",
+      "url": "https://txtpod.app/",
       "description": "Turn any article into a podcast episode with natural AI narration in 20+ languages. Delivered to your private podcast feed for listening in any podcast app.",
       "inLanguage": "en"
+    }
+    </script>
+
+    <!-- Organization structured data -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Organization",
+      "name": "txtpod",
+      "url": "https://txtpod.app/",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://txtpod.app/favicon/apple-touch-icon.png"
+      }
+    }
+    </script>
+
+    <!-- HowTo structured data: convert an article to audio -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "HowTo",
+      "name": "Convert an article to audio with txtpod",
+      "description": "Save a link, pick a voice, subscribe to your private podcast feed, and listen in your favorite podcast app.",
+      "totalTime": "PT1M",
+      "tool": ["txtpod"],
+      "step": [
+        {"@type": "HowToStep", "name": "Save the link", "text": "Use the share extension or paste a URL into txtpod."},
+        {"@type": "HowToStep", "name": "Choose a voice", "text": "Select from 30+ styles in 20+ languages."},
+        {"@type": "HowToStep", "name": "Subscribe to your feed", "text": "Copy your private RSS feed and add it to Apple Podcasts, Overcast, or Pocket Casts."},
+        {"@type": "HowToStep", "name": "Listen anywhere", "text": "New narrations appear automatically in your podcast app."}
+      ]
     }
     </script>
   </head>
@@ -117,7 +155,7 @@
       <div class="container">
         <div class="hero-head">
           <div class="hero-titles">
-            <p class="ios-badge" aria-label="Ready for iOS 26"><span class="ios-badge-text">Ready for iOS 26</span></p>
+            <p class="ios-badge" aria-label="Version"><span class="ios-badge-text">Ready for iOS 26</span></p>
             <h1 class="app-title">txtpod</h1>
             <p class="app-subtitle">Turn articles into your personal podcast</p>
           </div>
@@ -146,13 +184,13 @@
       <section id="features" class="features container" aria-label="Features">
         <div class="features-grid">
           <article class="feature-card">
-            <img src="images/txtpod-feature-1.webp" alt="Save articles and extract clean text" loading="lazy" />
+            <img src="images/txtpod-feature-1.webp" alt="Convert articles to audio and listen later with natural voices" loading="lazy" />
             <h3>Convert articles to audio</h3>
             <p>Turn what you read into what you listen to. txtpod converts articles into natural audio so you can listen later without losing context.</p>
           </article>
 
           <article class="feature-card">
-            <img src="images/txtpod-feature-2.webp" alt="Natural AI voices in many languages" loading="lazy" />
+            <img src="images/txtpod-feature-2.webp" alt="Save from anywhere and listen anywhere thanks to private podcast conversion" loading="lazy" />
             <h3>Save from anywhere</h3>
             <p>Use the share extension to save from any app. Your articles become podcast episodes you can listen to anywhere and anytime.</p>
           </article>
@@ -164,21 +202,51 @@
           </article>
 
           <article class="feature-card">
-            <img src="images/txtpod-feature-4.webp" alt="Automatic translation options" loading="lazy" />
+            <img src="images/txtpod-feature-4.webp" alt="Full player to listen, organize, queue, and change speed" loading="lazy" />
             <h3>Full player controls</h3>
             <p>Listen with a full player. Organize the queue, change speed, skip, and manage your episodes with ease.</p>
           </article>
 
           <article class="feature-card">
-            <img src="images/txtpod-feature-5.webp" alt="Archive, streaks, stats, and covers" loading="lazy" />
+            <img src="images/txtpod-feature-5.webp" alt="Customize your private podcast with colors, cover, symbols, and name" loading="lazy" />
             <h3>Make it yours</h3>
             <p>Create your own podcast with customizable cover, colors, title, and more so it feels personal and easy to find.</p>
           </article>
 
           <article class="feature-card">
-            <img src="images/txtpod-feature-6.webp" alt="Offline listening and distraction free experience" loading="lazy" />
+            <img src="images/txtpod-feature-6.webp" alt="Keep streaks of articles listened and view stats" loading="lazy" />
             <h3>Streaks and stats</h3>
             <p>Keep streaks of articles listened and track stats so you learn a bit more every day.</p>
+          </article>
+        </div>
+      </section>
+
+      <section id="use-cases" class="use-cases container" aria-label="Use cases">
+        <h2>Use cases</h2>
+        <div class="use-cases-grid">
+          <article>
+            <h3>Commute</h3>
+            <p>Save long reads during the day and listen on the way home in your podcast app.</p>
+          </article>
+          <article>
+            <h3>Workouts</h3>
+            <p>Queue articles and listen hands free while running, lifting, or walking.</p>
+          </article>
+          <article>
+            <h3>Language learning</h3>
+            <p>Translate automatically and listen in another language with natural voices.</p>
+          </article>
+          <article>
+            <h3>Deep focus</h3>
+            <p>Turn long form pieces into a playlist for distraction free listening at 1.2x or 1.5x.</p>
+          </article>
+          <article>
+            <h3>Accessibility</h3>
+            <p>Turn dense web pages into clear audio you can control with your player of choice.</p>
+          </article>
+          <article>
+            <h3>Offline travel</h3>
+            <p>Download episodes in your podcast app for flights and spotty connections.</p>
           </article>
         </div>
       </section>
@@ -191,36 +259,6 @@
         <p>
           Stop letting articles pile up. With txtpod, your reading queue transforms into a personal podcast that is ready whenever you are.
         </p>
-        
-        <section class="use-cases" aria-label="More features">
-          <h2>More features</h2>
-          <div class="use-cases-grid">
-            <article>
-              <h3>Save links</h3>
-              <p>Save articles from any link and txtpod extracts the clean text.</p>
-            </article>
-            <article>
-              <h3>Natural AI voices in many languages</h3>
-              <p>Convert to audio with high fidelity AI voices. Choose from 30+ styles in 20+ languages.</p>
-            </article>
-            <article>
-              <h3>Private podcast feed ready for popular apps</h3>
-              <p>Your own podcast feed. Every article becomes an episode you can stream in any podcast player including Apple Podcasts, Overcast, Pocket Casts, and more.</p>
-            </article>
-            <article>
-              <h3>Automatic translation options</h3>
-              <p>Listen in your language with instant translation. Great for multilingual reading lists.</p>
-            </article>
-            <article>
-              <h3>Archive, streaks, stats, and covers</h3>
-              <p>Archive, streaks, stats, and customizable covers keep your queue tidy and motivated.</p>
-            </article>
-            <article>
-              <h3>Offline listening and distraction free experience</h3>
-              <p>Offline and distraction free so your reading list becomes your listening list.</p>
-            </article>
-          </div>
-        </section>
       </section>
 
       <section id="how" class="aso-highlights container" aria-label="How it works">
@@ -238,7 +276,7 @@
             <ul class="checklist">
               <li>Stream in Apple Podcasts, Overcast, Pocket Casts, Spotify, and more.</li>
               <li>Choose from 30+ natural voices in 20+ languages.</li>
-              <li>Use integrations like Instapaper or Readwise to save faster.</li>
+              <li>Use integrations like Instapaper, Readwise, or Matter to save faster.</li>
             </ul>
           </div>
         </div>
@@ -247,8 +285,39 @@
       <section id="seo-intent" class="seo-intro container" aria-label="Comparisons and alternatives">
         <h2>Works with your tools</h2>
         <p>
-          Save articles directly or connect services like Instapaper, Readwise, and Omnivore. If you are looking for a Speechify alternative that gives you a personal podcast, txtpod is a simple listen later app that turns text to speech and delivers a private RSS feed with natural, high quality voices in many languages.
+          Save articles directly or connect services like Instapaper, Readwise, and Matter. If you are looking for a Speechify alternative that gives you a personal podcast, txtpod is a simple listen later app that turns text to speech and delivers a private RSS feed with natural, high quality voices in many languages.
         </p>
+      </section>
+
+      <section id="alternatives" class="alternatives container" aria-label="Alternatives and comparisons">
+        <h2>Alternatives</h2>
+        <p>How txtpod compares to other tools you might know.</p>
+        <div class="use-cases-grid">
+          <article>
+            <h3>Speechify alternative</h3>
+            <p>Unlike a typical text to speech reader, txtpod creates a private podcast feed so episodes appear in Apple Podcasts, Overcast, and Pocket Casts. Enjoy high quality AI voices with 30+ styles across 20+ languages.</p>
+          </article>
+          <article>
+            <h3>Instapaper alternative</h3>
+            <p>txtpod is not a read later app. It turns saved articles into audio and delivers them to your podcast player so you can listen hands free. Voices are natural and high fidelity, not robotic.</p>
+          </article>
+          <article>
+            <h3>Readwise alternative</h3>
+            <p>txtpod focuses on listening. Save links, convert to audio, and play in your existing podcast workflow. Choose from 30+ voice styles with clear, natural delivery.</p>
+          </article>
+          <article>
+            <h3>Matter alternative</h3>
+            <p>Many read later apps add audio playback in their own app. txtpod is different because it gives you a private podcast feed that works in any player and uses high quality AI voices for a pleasant listen.</p>
+          </article>
+          <article>
+            <h3>Pocket alternative</h3>
+            <p>Since Pocket shut down, you can use txtpod as an alternative. txtpod converts your saved articles to audio and publishes them to a private podcast you can hear in any player.</p>
+          </article>
+          <article>
+            <h3>NaturalReader alternative</h3>
+            <p>NaturalReader is a solid text to speech tool. txtpod is different because it outputs a private RSS feed so your narrated articles live in your podcast app with playlists, downloads, and speed control. txtpod voices sound natural thanks to high quality AI models.</p>
+          </article>
+        </div>
       </section>
 
       <section id="reviews" class="reviews container" aria-label="Reviews and testimonials">
@@ -316,6 +385,26 @@
         <h2>FAQ</h2>
         <div class="faq-list">
           <details class="faq-item">
+            <summary>How is txtpod different from text to speech apps?</summary>
+            <div class="faq-body">
+              <p>txtpod does not keep you in a new player. It creates a private podcast feed so your narrated articles show up in the podcast app you already use.</p>
+            </div>
+          </details>
+
+          <details class="faq-item">
+            <summary>How is txtpod different from read later apps?</summary>
+            <div class="faq-body">
+              <p>txtpod is focused on listening. It converts articles to audio and sends them to your podcast app rather than building another reading list.</p>
+            </div>
+          </details>
+
+          <details class="faq-item">
+            <summary>Is txtpod a podcast player?</summary>
+            <div class="faq-body">
+              <p>txtpod is not a podcast player. It generates a personal podcast feed of your narrated articles that you play in Apple Podcasts, Overcast, Pocket Casts, and more.</p>
+            </div>
+          </details>
+          <details class="faq-item">
             <summary>What does txtpod do?</summary>
             <div class="faq-body">
               <p>txtpod saves links, scrapes the clean text, converts it into natural audio, and publishes each narration to your private podcast feed.</p>
@@ -344,9 +433,9 @@
           </details>
 
           <details class="faq-item">
-            <summary>Does txtpod work with Instapaper or Readwise?</summary>
+            <summary>Does txtpod work with Instapaper, Readwise, or Matter?</summary>
             <div class="faq-body">
-              <p>Yes. You can save directly or sync with tools like Instapaper, Readwise, or Omnivore to pull in saved links.</p>
+              <p>Yes. You can save directly or sync with tools like Instapaper, Readwise, or Matter to pull in saved links.</p>
             </div>
           </details>
 
@@ -432,7 +521,7 @@
           <a href="#how">How it works</a>
           <a href="#faq">FAQ</a>
           <a href="https://apps.apple.com/us/app/left-widgets-for-time-left/id6740155884" target="_blank" rel="noopener">Download</a>
-          <a href="#privacy">Privacy</a>
+          <a href="http://cristianrus.me/apps/txtpod" target="_blank" rel="noopener">Privacy</a>
         </nav>
       </div>
     </footer>
