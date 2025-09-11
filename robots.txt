@@ -1,4 +1,4 @@
-# robots.txt for Left — Widgets for Time Left
+# robots.txt for txtpod - Turn articles into a private podcast
 
 # Allow all crawlers to index the site
 User-agent: *
@@ -9,5 +9,6 @@ Allow: /images/
 Allow: /style.css
 Allow: /index.html
 
-# Sitemap (absolute URL)
-Sitemap: https://left-time.app/sitemap.xml
+# Sitemap
+# Use absolute URL for clarity
+Sitemap: https://txtpod.app/sitemap.xml

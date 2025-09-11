@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!--
-  Sitemap for Left — Widgets for Time Left
-  Note: Replace the <loc> domain with your live site URL once known.
+  Sitemap for txtpod - Turn articles into a private podcast
 -->
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
-    <loc>https://left-time.app/</loc>
+    <loc>https://txtpod.app/</loc>
     <lastmod>2025-09-10T21:31:07Z</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
   </url>
 </urlset>
+

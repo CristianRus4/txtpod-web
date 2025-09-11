@@ -1,13 +1,13 @@
 /*
-  Left – Landing Page Styles
+  txtpod - Landing Page Styles
   - Gradient background: top-right (#FF4019) to bottom-left (#E69525)
-  - Responsive grid: 1 col (mobile) → 3 cols (desktop)
-  - Fonts: Roboto / Ubuntu → system sans fallback
+  - Responsive grid: 1 col (mobile) -> 3 cols (desktop)
+  - Fonts: Roboto / Ubuntu -> system sans fallback
 */
 
 :root {
-  --bg-start: #FF6B24;
-  --bg-end: #E69525;
+  --bg-start: #5940ED;
+  --bg-end: #5940ED;
   --text: #ffffff;
   --text-dim: rgba(255, 255, 255, 0.85);
   --card-bg: rgba(255, 255, 255, 0.10);
