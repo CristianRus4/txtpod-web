@@ -2,7 +2,7 @@
   txtpod - Landing Page Styles
   - Gradient background: top-right (#FF4019) to bottom-left (#E69525)
   - Responsive grid: 1 col (mobile) -> 3 cols (desktop)
-  - Fonts: Roboto / Ubuntu -> system sans fallback
+  - Fonts: System UI sans fallback only
 */
 
 :root {
@@ -37,7 +37,7 @@ body {
   margin: 0;
   color: var(--text);
   background: var(--bg-start);
-  font-family: 'Roboto', 'Ubuntu', system-ui, -apple-system, 'Segoe UI', 'Helvetica Neue', Arial, sans-serif;
+  font-family: system-ui, -apple-system, 'Segoe UI', 'Helvetica Neue', Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   min-width: 370px; /* allow horizontal scroll below 370px */
