@@ -521,3 +521,44 @@ a:hover { text-decoration: none; font-weight: 700; }
 .checklist { margin: 0; padding-left: 0; color: var(--text-dim); list-style: none; }
 .checklist li { margin: 6px 0; position: relative; padding-left: 16px; }
 .checklist li::before { content: "-"; position: absolute; left: 0; color: var(--text); opacity: 0.95; }
+
+/* Legal pages */
+.legal-nav {
+  position: static;
+  opacity: 1;
+  transform: none;
+  pointer-events: auto;
+}
+
+.legal-page {
+  max-width: 860px;
+  padding-block: calc(72px + env(safe-area-inset-top)) 72px;
+}
+
+.legal-page h1 {
+  margin: 0 0 22px;
+  font-size: clamp(40px, 7vw, 72px);
+  line-height: 1.05;
+}
+
+.legal-page h2 {
+  margin: 34px 0 10px;
+  font-size: clamp(22px, 3vw, 30px);
+}
+
+.legal-page p {
+  margin: 0 0 16px;
+  color: var(--text-dim);
+  font-size: clamp(16px, 2vw, 18px);
+  line-height: 1.65;
+}
+
+.legal-page a,
+.legal-page a:visited {
+  color: var(--text);
+}
+
+.legal-kicker {
+  font-weight: 700;
+  color: var(--text);
+}
