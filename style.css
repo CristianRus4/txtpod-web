@@ -749,6 +749,14 @@ p { margin: 0; }
 
 .review-author { font-size: 13px; color: var(--text-secondary); margin-top: 14px; font-weight: 600; }
 
+/* Lead review: bigger type so the strongest quote carries the section. */
+.review-card.is-featured { padding: clamp(26px, 3vw, 34px); }
+.review-card.is-featured h3 { font-size: clamp(20px, 2.2vw, 24px); letter-spacing: -0.02em; }
+.review-card.is-featured p { font-size: 16px; color: var(--text); }
+.review-card.is-featured .review-author { color: var(--text-secondary); }
+
+.reviews-link { color: var(--accent); font-weight: 600; white-space: nowrap; }
+
 .reviews-note { margin-top: 12px; font-size: 13px; color: var(--text-secondary); }
 
 /* ---------- FAQ ---------- */
