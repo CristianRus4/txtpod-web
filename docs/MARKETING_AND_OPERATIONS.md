@@ -62,8 +62,6 @@ the actual hosting source/branch before release. After publishing, check the
 custom domain, TLS, redirect, deep pages, sample media, and cache behavior.
 Rollback by restoring the last known-good site commit in the configured host.
 
-## Nexus
+## Repository documentation
 
-The Nexus workflow syncs documentation on pushes to main but does not deploy the
-website. Confirm both publication paths separately. New local documents will
-not appear in Nexus until committed and pushed.
+Committed documentation lives in this repository and Context reads it directly.

@@ -23,8 +23,7 @@ locally over HTTP for review:
 npx serve .
 ```
 
-The inspected repository has a Nexus documentation workflow but no website
-deployment workflow. `CNAME` points at `txtpod.app`, consistent with a GitHub
+The inspected repository has no website deployment workflow. `CNAME` points at `txtpod.app`, consistent with a GitHub
 Pages-style custom domain, but the publishing branch and external hosting
 configuration must be confirmed before relying on automatic deployment.
 

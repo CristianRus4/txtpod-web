@@ -11,7 +11,7 @@ The signed-in web application is a separate surface owned by the app repository.
 | Copy, SEO, legal/support changes, release, or incident work | [Marketing and operations](MARKETING_AND_OPERATIONS.md) |
 | iOS, web-app, Firebase, feed, and processing behavior | [txtpod app blueprint](../../../Apps/txtpod-app/docs/APP_BLUEPRINT.md) |
 | Product direction | [txtpod product strategy](../../../Apps/txtpod-app/docs/PRODUCT_STRATEGY.md) |
-| Nexus ownership | [Nexus project](nexus/PROJECT.md) and [website operations](nexus/WEBSITE.md) |
+| Project ownership | [project](PROJECT.md) and [website operations](WEBSITE.md) |
 
 ## Identity and surfaces
 
@@ -31,5 +31,4 @@ repository is authoritative for shipped behavior and service architecture.
 Neither site copy nor support prose may define a capability the product does
 not implement.
 
-The Nexus manifest includes `docs/**/*.md`; committed documentation syncs after
-a push to main.
+Context reads committed documentation directly from this repository.
